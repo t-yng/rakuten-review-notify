@@ -1,5 +1,5 @@
 import { app, BrowserWindow, ipcMain } from 'electron'
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
 import parse from 'csv-parse/lib/sync';
 import RMS from '../lib/rms';
 import MailSend from '../lib/notification/MailSend';
@@ -11,10 +11,18 @@ const createWindow = (): BrowserWindow => {
   return win;
 }
 
+const getDefaultOsChromePath = () => {
+  if (process.platform === 'win32') {
+    return 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
+  } else {
+    return '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+  }
+}
+
 const downloadCsv = async () => {
-  console.log('start download csv ...');
   const browser = await puppeteer.launch({
     headless: false,
+    executablePath: getDefaultOsChromePath(),
   });
 
   try {

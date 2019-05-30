@@ -15,7 +15,7 @@
   "devDependencies": {
     "@types/csv-parse": "^1.2.2",
     "@types/node": "^11.12.2",
-    "@types/puppeteer": "^1.12.3",
+    "@types/puppeteer-core": "^1.9.0",
     "@types/react": "^16.8.12",
     "@types/react-dom": "^16.8.3",
     "@types/rimraf": "^2.0.2",
@@ -36,7 +36,7 @@
     "chokidar": "^2.0.4",
     "csv-parse": "^4.4.3",
     "iconv-lite": "^0.4.24",
-    "puppeteer": "^1.12.1",
+    "puppeteer-core": "^1.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
