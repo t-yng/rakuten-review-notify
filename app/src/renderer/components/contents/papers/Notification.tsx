@@ -9,7 +9,7 @@ import {
   Button,
 } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
-import NotificationConfig from '../../../lib/config/NotificationConfig';
+import NotificationConfig from '../../../../lib/config/NotificationConfig';
 
 const styles = {
   root: {
