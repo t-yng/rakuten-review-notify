@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { app } from 'electron';
 import { Page, CDPSession } from "puppeteer";
 import * as chokidar from 'chokidar';
 import iconv from 'iconv-lite';
@@ -69,7 +70,7 @@ export default class RMS {
   }
 
   static get DOWNLOAD_DIR() {
-    return  `${__dirname}/../../download`;
+    return `${app.getAppPath()}/app/downloads`;
   }
 
   static get LOGIN_PAGE_URL() {
@@ -78,7 +79,7 @@ export default class RMS {
 
   static get DOWNLOAD_REVIEW_PAGE_URL() {
     const url = 'https://review.rms.rakuten.co.jp/search/index/'
-    const testUrl = 'https://review.rms.rakuten.co.jp/search/index/?sy=2019&sm=1&sd=1&sh=0&si=0&ey=2019&em=2&ed=5&eh=23&ei=59&ev=1&tc=1&kw=&ao=A&st=1'
+    const testUrl = 'https://review.rms.rakuten.co.jp/search/index/?sy=2019&sm=1&sd=1&sh=0&si=0&ey=2019&em=5&ed=30&eh=23&ei=59&ev=1&tc=1&kw=&ao=A&st=1'
     return testUrl
   }
 }
