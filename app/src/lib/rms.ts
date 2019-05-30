@@ -37,14 +37,14 @@ export default class RMS {
     ]);
   }
 
-  async downloadReviewCsv() {
-    const page = this.page
-    await page.goto(RMS.DOWNLOAD_REVIEW_PAGE_URL)
+  async downloadReviewCsv(): Promise<string> {
+    const page = this.page;
+    await page.goto(RMS.DOWNLOAD_REVIEW_PAGE_URL);
 
     // TODO: レビュー期間を設定
 
     // ファイルがダウンロードされたら文字列を読み込んでプロミスを解決する
-    const promise = new Promise((resolve) => {
+    const promise: Promise<string> = new Promise((resolve) => {
       chokidar.watch(RMS.DOWNLOAD_DIR, {
         persistent: false
       }).on('add', (path:string) => {
@@ -52,8 +52,8 @@ export default class RMS {
         const buf = fs.readFileSync(path)
         const csv = iconv.decode(buf, 'Shift_JIS')
         resolve(csv)
-      })
-    })
+      });
+    });
 
     // CSVダウンロード
     if(!fs.existsSync(RMS.DOWNLOAD_DIR)) {
@@ -63,10 +63,10 @@ export default class RMS {
     await client.send('Page.setDownloadBehavior', {
       behavior: 'allow',
       downloadPath: RMS.DOWNLOAD_DIR
-    })
-    await page.click('#csv_download a')
+    });
+    await page.click('#csv_download a');
 
-    return promise
+    return promise;
   }
 
   static get DOWNLOAD_DIR() {

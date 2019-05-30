@@ -13,11 +13,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/csv-parse": "^1.2.2",
     "@types/node": "^11.12.2",
+    "@types/puppeteer": "^1.12.3",
     "@types/react": "^16.8.12",
     "@types/react-dom": "^16.8.3",
     "@types/rimraf": "^2.0.2",
-    "@types/puppeteer": "^1.12.3",
+    "@types/sendmail": "^1.4.2",
     "css-loader": "^2.1.1",
     "electron": "^4.0.3",
     "style-loader": "^0.23.1",
@@ -32,11 +34,13 @@
     "@material-ui/icons": "^3.0.2",
     "@types/react-router-dom": "^4.3.1",
     "chokidar": "^2.0.4",
+    "csv-parse": "^4.4.3",
     "iconv-lite": "^0.4.24",
     "puppeteer": "^1.12.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "sendmail": "^1.4.1"
   }
 }
