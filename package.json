@@ -5,8 +5,8 @@
   "main": "app/dist/main.bundle.js",
   "scripts": {
     "start": "electron .",
-    "build": "webpack",
-    "watch": "webpack --watch",
+    "build": "webpack --config webpack.dev.js",
+    "watch": "webpack --watch --config webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

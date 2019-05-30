@@ -46,4 +46,4 @@ const main = Object.assign({}, common, {
   },
 });
 
-module.exports = [main, renderer];
+module.exports = {main, renderer};
