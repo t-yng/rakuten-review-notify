@@ -7,7 +7,23 @@
     "start": "electron .",
     "build": "webpack --config webpack.dev.js",
     "watch": "webpack --watch --config webpack.dev.js",
+    "pack:mac": "webpack --config webpack.prod.js && electron-builder --mac",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "rapid.example.app",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "app/dist/**/*",
+      "app/views/**/*"
+    ],
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    }
   },
   "keywords": [],
   "author": "",
@@ -22,6 +38,7 @@
     "@types/sendmail": "^1.4.2",
     "css-loader": "^2.1.1",
     "electron": "^4.0.3",
+    "electron-builder": "^20.41.0",
     "style-loader": "^0.23.1",
     "ts-loader": "^5.3.3",
     "typescript": "^3.4.1",
