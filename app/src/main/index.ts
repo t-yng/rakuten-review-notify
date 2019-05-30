@@ -16,8 +16,8 @@ const downloadCsv = async () => {
   const page = pages[0]
   const rms = new RMS(page)
   await rms.login()
-  // const csv = await rms.downloadReviewCsv()
-  // console.log(csv)
+  const csv = await rms.downloadReviewCsv()
+  console.log(csv)
 }
 
 (async () => {
