@@ -2,7 +2,7 @@
   "name": "review-notify",
   "version": "1.0.0",
   "description": "",
-  "main": "app/dist/main.bundle.js",
+  "main": "app/build/main.bundle.js",
   "scripts": {
     "start": "electron .",
     "build": "webpack --config webpack.dev.js",
@@ -16,7 +16,7 @@
       "output": "build"
     },
     "files": [
-      "app/dist/**/*",
+      "app/build/**/*",
       "app/views/**/*"
     ],
     "mac": {
