@@ -6,8 +6,10 @@
   "scripts": {
     "start": "electron .",
     "build": "webpack --config webpack.dev.js",
+    "build:prod": "webpack --config webpack.prod.js",
     "watch": "webpack --watch --config webpack.dev.js",
-    "pack:mac": "webpack --config webpack.prod.js && electron-builder --mac",
+    "pack:mac": "npm run build:prod && electron-builder --mac",
+    "pack:win": "npm run build:prod && electron-builder --win",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "build": {
@@ -22,6 +24,11 @@
     "mac": {
       "target": [
         "dmg"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
       ]
     }
   },
