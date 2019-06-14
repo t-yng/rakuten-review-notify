@@ -1,3 +1,4 @@
+import path from 'path';
 import { app, BrowserWindow, ipcMain } from 'electron'
 import puppeteer from 'puppeteer-core';
 import parse from 'csv-parse/lib/sync';
@@ -7,7 +8,8 @@ import MailMessageBuilder from '../lib/notification/MailMessageBuilder';
 
 const createWindow = (): BrowserWindow => {
   const win = new BrowserWindow({ width: 800, height: 600 });
-  win.loadFile(`${app.getAppPath()}/app/views/index.html`);
+  const file = `${app.getAppPath()}/app/views/index.html`;
+  win.loadFile(path.resolve(file));
   return win;
 }
 
