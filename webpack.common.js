@@ -9,7 +9,7 @@ const tsLoaderRule = {
 const common = {
   mode: 'development',
   output: {
-    path: path.resolve(__dirname, "app/build"),
+    path: path.resolve(__dirname, "app/dist"),
     filename: "[name].bundle.js"
   },
   module: {

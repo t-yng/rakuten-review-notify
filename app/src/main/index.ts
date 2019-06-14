@@ -7,7 +7,7 @@ import MailMessageBuilder from '../lib/notification/MailMessageBuilder';
 
 const createWindow = (): BrowserWindow => {
   const win = new BrowserWindow({ width: 800, height: 600 });
-  win.loadFile('app/views/index.html');
+  win.loadFile(`${app.getAppPath()}/app/views/index.html`);
   return win;
 }
 

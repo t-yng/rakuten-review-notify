@@ -2,7 +2,7 @@
   "name": "review-notify",
   "version": "1.0.0",
   "description": "",
-  "main": "app/build/main.bundle.js",
+  "main": "app/dist/main.bundle.js",
   "scripts": {
     "start": "electron .",
     "build": "webpack --config webpack.dev.js",
@@ -15,10 +15,10 @@
   "build": {
     "appId": "rapid.example.app",
     "directories": {
-      "output": "build"
+      "output": "packages/${os}"
     },
     "files": [
-      "app/build/**/*",
+      "app/dist/**/*",
       "app/views/**/*"
     ],
     "mac": {

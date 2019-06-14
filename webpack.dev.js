@@ -1,4 +1,3 @@
-// const merge = require('webpack-merge');
 let { main, renderer } = require('./webpack.common.js');
 
 const MODE = 'development';
