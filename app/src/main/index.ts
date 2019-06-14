@@ -22,9 +22,17 @@ const getDefaultOsChromePath = () => {
 }
 
 const downloadCsv = async () => {
+  const [ width, height ] = [ 800, 900 ];
   const browser = await puppeteer.launch({
     headless: false,
     executablePath: getDefaultOsChromePath(),
+    args: [
+      `--window-size=${width},${height}`
+    ],
+    defaultViewport: {
+      width: width,
+      height: height,
+    },
   });
 
   try {
