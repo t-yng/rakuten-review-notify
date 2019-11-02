@@ -58,7 +58,7 @@
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
     "chokidar": "^2.0.4",
-    "csv-parse": "^4.4.3",
+    "csv-parse": "^4.4.6",
     "iconv-lite": "^0.4.24",
     "puppeteer-core": "^1.17.0",
     "react": "^16.8.6",
