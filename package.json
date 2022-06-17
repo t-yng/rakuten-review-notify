@@ -45,7 +45,7 @@
     "@types/sendmail": "^1.4.2",
     "@types/react-router-dom": "^4.3.1",
     "css-loader": "^2.1.1",
-    "electron": "^4.0.3",
+    "electron": "^15.5.5",
     "electron-builder": "^20.41.0",
     "style-loader": "^0.23.1",
     "ts-loader": "^5.3.3",
